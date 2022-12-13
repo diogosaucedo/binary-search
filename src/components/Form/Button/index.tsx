@@ -11,6 +11,7 @@ const Button = ({
   background,
   border,
   color,
+  fontFamily,
   fontSize,
   textDecoration,
   hover,
@@ -24,6 +25,7 @@ const Button = ({
       background={background}
       border={border}
       color={color}
+      fontFamily={fontFamily}
       fontSize={fontSize}
       textDecoration={textDecoration}
       hover={hover}

@@ -9,6 +9,7 @@ type ButtonType = {
   background?: string;
   border?: string;
   color?: string;
+  fontFamily?: string;
   fontSize?: string;
   textDecoration?: string;
   hover?: string;

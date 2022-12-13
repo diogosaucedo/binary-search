@@ -12,6 +12,7 @@ const Button = styled.button<ButtonType>`
   border: ${({ border }) => border};
   outline: none;
   color: ${({ color }) => color};
+  font-family: ${({ fontFamily }) => fontFamily || 'inherit'};
   font-size: ${({ fontSize }) => fontSize};
   text-decoration: ${({ textDecoration }) => textDecoration};
   :hover {
