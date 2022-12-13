@@ -26,7 +26,12 @@ function App() {
   };
 
   if (state === 'START') {
-    return <Button onClick={startGame}>Start Game</Button>;
+    return (
+      <div className="App">
+        <GlobalStyles />
+        <Button onClick={startGame}>Start Game</Button>
+      </div>
+    );
   }
 
   const less = () => {
@@ -49,12 +54,15 @@ function App() {
 
   if (state === 'END') {
     return (
-      <Center>
-        <Text>
-          I hit number {guess} with {guessCounter} guesses!
-        </Text>
-        <Button onClick={startGame}>Start Game</Button>
-      </Center>
+      <div className="App">
+        <GlobalStyles />
+        <Center>
+          <Text>
+            I hit number {guess} with {guessCounter} guesses!
+          </Text>
+          <Button onClick={startGame}>Start Game</Button>
+        </Center>
+      </div>
     );
   }
   return (

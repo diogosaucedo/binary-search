@@ -6,6 +6,7 @@ export default createGlobalStyle`
     padding: 0;
     outline: none;
     box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px
   }
 
   body {
@@ -13,15 +14,13 @@ export default createGlobalStyle`
     justify-content: center;
     align-items: center;
 
+    min-height: 100vh;
+
     font-family: sans-serif;
-    font-size: 62.5%; // 1rem = 10px
     font-weight: 400;
 
   }
 
-  html, body, #root {
-    min-height: 100%;
-  }
 
   a {
     text-decoration: none;
