@@ -1,8 +1,7 @@
 import React from 'react';
-import Button from './components/Form/Button';
-import Center from './components/Layout/Center';
-import Stack from './components/Layout/Stack';
-import Text from './components/Typography/Text';
+import End from './components/Binary Search/End';
+import Running from './components/Binary Search/Running';
+import Start from './components/Binary Search/Start';
 import GlobalStyles from './styles/GlobalStyles';
 
 function App() {
@@ -25,15 +24,6 @@ function App() {
     setGuess(150);
   };
 
-  if (state === 'START') {
-    return (
-      <div className="App">
-        <GlobalStyles />
-        <Button onClick={startGame}>Start Game</Button>
-      </div>
-    );
-  }
-
   const less = () => {
     setGuessCounter(guessCounter + 1);
     setMax(guess);
@@ -52,30 +42,26 @@ function App() {
     setState('END');
   };
 
-  if (state === 'END') {
-    return (
-      <div className="App">
-        <GlobalStyles />
-        <Center>
-          <Text>
-            I hit number {guess} with {guessCounter} guesses!
-          </Text>
-          <Button onClick={startGame}>Start Game</Button>
-        </Center>
-      </div>
-    );
-  }
   return (
     <div className="App">
       <GlobalStyles />
-      <Center>
-        <Text>Is your number {guess}?</Text>
-        <Stack gap="8px">
-          <Button onClick={less}>Less</Button>
-          <Button onClick={win}>Win</Button>
-          <Button onClick={greater}>Greater</Button>
-        </Stack>
-      </Center>
+      <br />
+      {state === 'START' ? (
+        <Start startGame={startGame}>Let me guess!</Start>
+      ) : state === 'END' ? (
+        <End
+          guess={guess}
+          guessCounter={guessCounter}
+          startGame={startGame}
+        ></End>
+      ) : (
+        <Running
+          guess={guess}
+          less={less}
+          win={win}
+          greater={greater}
+        ></Running>
+      )}
     </div>
   );
 }
