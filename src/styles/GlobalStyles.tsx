@@ -16,7 +16,7 @@ export default createGlobalStyle`
 
     min-height: 100vh;
 
-    font-family: sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 
   }
