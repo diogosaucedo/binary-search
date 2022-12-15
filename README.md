@@ -47,7 +47,7 @@ It will start Storybook locally and output the address. Depending on your system
 
 Running `npm run build-storybook` will output a static Storybook in the `storybook-static` directory, which can then be deployed to any static site hosting service.
 
-## Pagination Component
+## Binary Search
 
 ### Resume
 
